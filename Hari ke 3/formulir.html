@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: linear-gradient(to bottom right, #1e90ff, #ffffff);
+    }
+    h1 {
+      color: #003366;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .back a {
+      text-decoration: none;
+      color: #fff;
+      background: #1e90ff;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .back a:hover {
+      background: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pendaftaran Pelatihan Web Menggunakan Node JS dan React</h1>
+  <p>Silakan isi formulir di bawah ini untuk mendaftar:</p>
+
+  <form action="#" method="post">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="wa">Nomor Telepon (WhatsApp)</label>
+    <input type="tel" id="wa" name="wa" required>
+
+    <label>Jenis Kelamin</label>
+    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+    <input type="radio" name="gender" value="Perempuan"> Perempuan
+
+    <label for="pilihan">Pilihan Pelatihan</label>
+    <select id="pilihan" name="pilihan" required>
+      <option value="Fullstack Web">Fullstack Web</option>
+      <option value="Mobile App">Mobile App</option>
+      <option value="UI/UX Design">UI/UX Design</option>
+    </select>
+
+    <label>Sumber Informasi (boleh pilih lebih dari satu):</label>
+    <input type="checkbox" name="sumber" value="Media Sosial"> Media Sosial
+    <input type="checkbox" name="sumber" value="Rekomendasi Teman"> Rekomendasi Teman
+    <input type="checkbox" name="sumber" value="Website"> Website
+
+    <label for="catatan">Catatan Tambahan (Opsional):</label>
+    <textarea id="catatan" name="catatan" rows="3"></textarea>
+
+    <button type="submit">Daftar Sekarang</button>
+    <button type="reset">Bersihkan Formulir</button>
+  </form>
+
+  <div class="back">
+    <a href="index.html">← Kembali ke Beranda</a>
+  </div>
+</body>
+</html>
