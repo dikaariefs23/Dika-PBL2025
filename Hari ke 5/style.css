@@ -1,5 +1,5 @@
 /* === STYLE.CSS FINAL === */
-/* Dibuat untuk: index.html, profile.html, about.html, contact.html, formulir.html */
+/* Digunakan oleh: index.html, profile.html, about.html, contact.html, formulir.html */
 
 /* ========== RESET & DASAR ========== */
 * {
@@ -217,4 +217,49 @@ footer {
   color: white;
   margin-top: 40px;
   border-radius: 25px 25px 0 0;
+}
+
+/* ========== GALERI SERTIFIKAT ========== */
+.certificate-gallery {
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.certificate-gallery h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #0078ff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 250px;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.certificate-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
 }
