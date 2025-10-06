@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pembelian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Formulir Pembelian Produk</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="profile.html">Profil</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="wa">Nomor WhatsApp</label>
+      <input type="tel" id="wa" name="wa" required>
+
+      <label for="produk">Produk yang Dibeli</label>
+      <select id="produk" name="produk" required>
+        <option value="Jersey Bola Original">Jersey Bola Original</option>
+        <option value="Sepatu Bola Premium">Sepatu Bola Premium</option>
+        <option value="Bola Adidas Resmi">Bola Adidas Resmi</option>
+        <option value="Aksesoris Bola Lengkap">Aksesoris Bola Lengkap</option>
+      </select>
+
+      <label for="alamat">Alamat Pengiriman</label>
+      <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+      <button type="reset">Bersihkan Formulir</button>
+    </form>
+
+    <div class="back">
+      <a href="index.html">← Kembali ke Beranda</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Toko Jersey Bola | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
