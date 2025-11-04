@@ -23,7 +23,7 @@ export default function Pillars() {
   return (
     <section className="section bg-white">
       <div className="container-narrow text-center">
-        <h2 className="h2 mb-8">Tiga Pilar Schóle Fitrah</h2>
+        <h2 className="h2 mb-8">Tiga Pilar Schole Fitrah</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {pillars.map((p, i) => (
             <div

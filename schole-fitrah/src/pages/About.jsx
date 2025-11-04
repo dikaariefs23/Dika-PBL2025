@@ -5,10 +5,10 @@ export default function About() {
     <section className="bg-gray-50 py-20 min-h-screen">
       <div className="max-w-5xl mx-auto text-center px-4">
         <h1 className="text-4xl font-bold text-green-700 mb-6">
-          Tentang Schóle Fitrah
+          Tentang Schole Fitrah
         </h1>
         <p className="text-lg text-slate-600 mb-8">
-          Schóle Fitrah merupakan lembaga pendidikan yang berfokus pada penumbuhan fitrah anak dan keluarga.
+          Schole Fitrah merupakan lembaga pendidikan yang berfokus pada penumbuhan fitrah anak dan keluarga.
           Kami mengintegrasikan nilai-nilai spiritual, sosial, dan akademik agar setiap anak tumbuh sesuai kodrat dan potensinya.
         </p>
         <div className="grid md:grid-cols-2 gap-8 text-left mt-10">

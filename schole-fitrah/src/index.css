@@ -2,12 +2,156 @@
 @tailwind components;
 @tailwind utilities;
 
-/* helpers */
-.container-narrow { @apply max-w-5xl mx-auto px-4; }
-.section { @apply py-12 md:py-16; }
-.h1 { @apply text-3xl md:text-5xl font-bold tracking-tight; }
-.h2 { @apply text-2xl md:text-3xl font-semibold; }
-.lead { @apply text-lg md:text-xl text-slate-600; }
-.card { @apply bg-white rounded-2xl shadow p-6; }
-.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium shadow hover:shadow-md transition; }
-.btn-brand { @apply bg-brand-600 text-white hover:bg-brand-700; }
+/* ======= FONT ======= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background-color: var(--sf-light);
+  color: var(--sf-dark);
+  scroll-behavior: smooth;
+}
+
+/* ======= COLORS ======= */
+:root {
+  --sf-brown: #7a5230;
+  --sf-gold: #c5966c;
+  --sf-light: #fffdfb;
+  --sf-dark: #5b4636;
+}
+
+/* ======= TRANSITION ======= */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ======= BUTTONS ======= */
+.btn {
+  @apply inline-flex items-center justify-center font-medium rounded-full px-5 py-3 shadow-sm transition-all duration-300;
+}
+.btn-gold {
+  @apply bg-[color:var(--sf-gold)] text-white hover:bg-[color:var(--sf-brown)];
+}
+.btn-outline {
+  @apply border border-[color:var(--sf-brown)] text-[color:var(--sf-brown)] hover:bg-[color:var(--sf-brown)] hover:text-white;
+}
+
+/* ======= CUSTOM UTILITIES (perlu biar gak error) ======= */
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ======= DARK MODE ======= */
+.dark body {
+  background-color: #0b0b0b !important;
+  color: #fafafa !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff !important;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+}
+
+.dark p,
+.dark span,
+.dark li {
+  color: #f1f1f1 !important;
+}
+
+/* ======= CARD ======= */
+.card {
+  @apply rounded-xl border border-gray-100 bg-white shadow-soft p-6;
+}
+.card:hover {
+  box-shadow: 0 0 20px rgba(197, 150, 108, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Dark Mode Card Fix */
+.dark .card {
+  background-color: #181818 !important;
+  border-color: #2a2a2a !important;
+  color: #f8f8f8 !important;
+}
+.dark .card h3 {
+  color: #ffdc9a !important;
+  font-weight: 600;
+}
+.dark .card p {
+  color: #f5f5f5 !important;
+}
+.dark .card:hover {
+  box-shadow: 0 0 25px rgba(255, 210, 140, 0.45);
+}
+
+/* ======= NAVBAR ======= */
+nav {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+.dark nav {
+  background-color: #000 !important;
+  color: #f8f8f8 !important;
+  border-bottom: 1px solid #2c2c2c !important;
+}
+.dark .nav-link {
+  color: #f8f8f8 !important;
+}
+.dark .nav-link:hover {
+  color: #ffdc9a !important;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.dark footer {
+  background-color: #0c0c0c !important;
+  color: #fafafa !important;
+}
+
+/* ======= LINKS ======= */
+a {
+  transition: color 0.3s ease;
+}
+.dark a {
+  color: #ffcc7d;
+}
+.dark a:hover {
+  color: #ffe2ad;
+}
+
+/* ======= SECTIONS ======= */
+.dark section {
+  background-color: #101010 !important;
+}
+section {
+  transition: all 0.4s ease-in-out;
+}
+
+/* ======= LOGO GLOW ======= */
+.logo-glow {
+  filter: drop-shadow(0 0 6px rgba(255, 210, 140, 0.4));
+  transition: filter 0.3s ease;
+}
+.logo-glow:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 210, 140, 0.7));
+}
+
+/* ======= CARD HOVER SHINE ======= */
+.card:hover h3,
+.card:hover p {
+  color: #fffaf2 !important;
+}
+
+/* ======= TEXT SELECTION ======= */
+::selection {
+  background-color: var(--sf-gold);
+  color: white;
+}

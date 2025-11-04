@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-white border-t mt-10">
-      <div className="max-w-6xl mx-auto text-center py-6 px-4">
-        <p className="text-slate-600 text-sm">
-          © {new Date().getFullYear()} <span className="font-semibold text-green-700">Schóle Fitrah</span>. Semua hak dilindungi.
-        </p>
-        <p className="text-slate-400 text-xs mt-1">
-          Dikembangkan oleh tim proyek PBL 2025 — Frontend by Dika Arief Sugiyatna 💻
-        </p>
-      </div>
+    <footer className="mt-20 text-center py-8 bg-sfBrown text-white dark:bg-[#111] dark:text-gray-300 transition-colors duration-500">
+      <p className="text-sm">
+        © 2025 Schole Fitrah. Semua hak dilindungi.
+      </p>
+      <p className="text-xs text-[#f9f7f4]/90 mt-1 dark:text-gray-400">
+        Dikembangkan dalam proyek PBL 2025 — Frontend by Dika Arief Sugiyatna 💻
+      </p>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

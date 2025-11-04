@@ -5,7 +5,7 @@ export default function TalentMapping() {
     <section className="py-20 bg-gray-50 min-h-screen">
       <div className="max-w-4xl mx-auto text-center px-4">
         <h1 className="text-4xl font-bold text-brand-700 mb-4">
-          Talent Mapping Schóle Fitrah
+          Talent Mapping Schole Fitrah
         </h1>
         <p className="text-lg text-slate-600 mb-6">
           Fitur ini membantu memetakan potensi dan minat anak secara holistik,
