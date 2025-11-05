@@ -1,49 +1,95 @@
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
-export default function Hero() {
+const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    // Animasi fade-in
+    setTimeout(() => setIsVisible(true), 300);
+
+    // Listener parallax scroll
+    const handleScroll = () => setOffsetY(window.scrollY * 0.3);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fungsi untuk scroll ke bagian tertentu
+  const scrollToSection = (id) => {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="pt-16 pb-12 bg-gradient-to-b from-[#fffdfb] to-white dark:from-[#1c1c1c] dark:to-[#111] transition-colors duration-500">
-      <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 items-center">
-        {/* Bagian kiri - teks hero */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-sfBrown dark:text-sfGold transition-colors duration-300">
-            Schole Fitrah – <br />
-            Menumbuhkan Fitrah Anak & Keluarga
-          </h1>
+    <section
+      className="relative h-[85vh] flex flex-col items-center justify-center overflow-hidden text-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80&v=12')",
+        backgroundAttachment: "fixed",
+        backgroundPositionY: `${offsetY * 0.5}px`,
+        backgroundSize: "cover",
+      }}
+    >
+      {/* Overlay agar teks tetap kontras */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#5B4636]/40 to-transparent pointer-events-none"></div>
 
-          <p className="text-base md:text-lg text-sfDark/90 dark:text-gray-300 mb-6 leading-relaxed">
-            Pendidikan holistik yang menumbuhkan fitrah jasmani, akal, ruhani, dan sosial;
-            relevan bagi keluarga modern di era digital.
-          </p>
+      {/* Konten utama */}
+      <div
+        className={`relative z-10 text-white px-6 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-lg mb-4">
+          Schole Fitrah – Menumbuhkan Fitrah Anak & Keluarga
+        </h1>
+        <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
+          Pendidikan holistik yang menumbuhkan fitrah jasmani, akal, ruhani, dan
+          sosial; relevan bagi keluarga modern di era digital.
+        </p>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              to="/programs"
-              className="px-6 py-3 rounded-full bg-sfGold text-white font-semibold hover:bg-sfBrown transition-colors duration-300"
-            >
-              Lihat Program
-            </Link>
-            <Link
-              to="/about"
-              className="px-6 py-3 rounded-full border border-sfGold text-sfGold hover:bg-sfGold hover:text-white dark:text-sfLight dark:border-sfGold dark:hover:bg-sfGold/80 dark:hover:text-white transition-colors duration-300"
-            >
-              Tentang Kami
-            </Link>
-          </div>
+        {/* Tombol aksi */}
+        <div
+          className={`mt-8 flex justify-center gap-4 transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          <button
+            onClick={() => scrollToSection("programs")}
+            className="bg-[color:var(--sf-gold)] text-[color:var(--sf-dark)] font-semibold px-6 py-2.5 rounded-full hover:bg-[color:var(--sf-brown)] hover:text-white transition-all shadow-md"
+          >
+            Lihat Program
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className="border-2 border-[color:var(--sf-gold)] text-[color:var(--sf-gold)] font-semibold px-6 py-2.5 rounded-full hover:bg-[color:var(--sf-gold)] hover:text-white transition-all shadow-md"
+          >
+            Tentang Kami
+          </button>
         </div>
+      </div>
 
-        {/* Bagian kanan - daftar poin */}
-        <div className="bg-white dark:bg-[#222] shadow-soft rounded-2xl p-8 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
-          <h3 className="text-xl font-semibold mb-3 text-sfBrown dark:text-sfGold">
-            Tujuan Utama
-          </h3>
-          <ul className="space-y-2 list-disc list-inside text-sfDark/90 dark:text-gray-300">
-            <li>Menumbuhkan fitrah iman, adab, dan potensi unik anak.</li>
-            <li>Integrasi 7 aspek Tarbiyatul Aulad secara modern.</li>
-            <li>Jaringan pembelajaran: Anak, Orang Tua, & Komunitas.</li>
-          </ul>
-        </div>
+      {/* Tombol panah scroll ke bawah */}
+      <div
+        onClick={() => scrollToSection("tujuan-utama")}
+        className={`absolute bottom-6 cursor-pointer animate-bounce text-[color:var(--sf-gold)] hover:text-white transition-all ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-8 h-8 mx-auto"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+        <p className="text-sm mt-1 font-medium">Scroll ke bawah</p>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;
