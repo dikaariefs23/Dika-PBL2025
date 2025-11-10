@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Komponen umum
@@ -13,9 +13,33 @@ import Audience from "./pages/Audience";
 import TalentMapping from "./pages/TalentMapping";
 import NotFound from "./pages/NotFound";
 
+// 🔥 Hook animasi fade-up saat scroll
+function useFadeUpOnScroll() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+}
+
 export default function App() {
+  useFadeUpOnScroll(); // ✅ aktifkan animasi scroll global
+
   return (
-    <div className="min-h-screen flex flex-col bg-sfLight text-sfDark dark:bg-[#1c1c1c] dark:text-sfLight transition-colors duration-300">
+    <div className="flex flex-col min-h-full bg-sfLight text-sfDark dark:bg-[#0b0b0b] dark:text-sfLight transition-colors duration-300">
       <Navbar />
       <main className="flex-1">
         <Routes>
