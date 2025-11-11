@@ -47,7 +47,7 @@ const Navbar = () => {
             className={`text-lg font-semibold tracking-wide transition-colors duration-500 ${
               scrolled
                 ? "text-[#704718] dark:text-[#f4e7ca]"
-                : "text-[#fff6e8] drop-shadow-md dark:text-[#f4e7ca]"
+                : "text-[#704718] dark:text-[#f4e7ca]"
             }`}
           >
             Schole Fitrah
@@ -59,7 +59,7 @@ const Navbar = () => {
           className={`hidden md:flex items-center space-x-8 font-medium transition-colors duration-300 ${
             scrolled
               ? "text-[#704718] dark:text-[#f4e7ca]"
-              : "text-[#fff6e8] dark:text-[#f4e7ca]"
+              : "text-[#704718] dark:text-[#f4e7ca]"
           }`}
         >
           {links.map((item) => (
@@ -80,13 +80,12 @@ const Navbar = () => {
 
         {/* === Tombol Dark Mode & Mobile Toggle === */}
         <div className="flex items-center gap-2">
-          {/* Tombol Dark Mode */}
           <button
             onClick={() => setIsDark(!isDark)}
             className={`hidden md:flex p-2 rounded-full border transition duration-300 ${
               isDark
                 ? "bg-[#dba94d] border-[#dba94d] text-white hover:bg-[#e5b760]"
-                : "border-[#dba94d] text-[#dba94d] hover:bg-[#f4e2b2] hover:text-[#7b5522]"
+                : "border-[#dba94d] text-[#704718] hover:bg-[#f4e2b2] hover:text-[#7b5522]"
             }`}
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -98,7 +97,7 @@ const Navbar = () => {
             className={`md:hidden p-2 rounded-md border transition-all duration-300 ${
               scrolled
                 ? "border-[#dba94d]/60 text-[#704718] dark:text-[#f4e7ca]"
-                : "border-white/50 text-[#fff6e8] dark:text-[#f4e7ca]"
+                : "border-[#dba94d]/60 text-[#704718] dark:text-[#f4e7ca]"
             } hover:bg-[#f9f3ec]/80 dark:hover:bg-[#2a2a2a]/70`}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -137,7 +136,7 @@ const Navbar = () => {
             className={`flex items-center gap-2 px-5 py-2.5 mt-2 rounded-full border transition duration-300 ${
               isDark
                 ? "bg-[#dba94d] border-[#dba94d] text-white hover:bg-[#e5b760]"
-                : "border-[#dba94d] text-[#dba94d] hover:bg-[#f4e2b2] hover:text-[#7b5522]"
+                : "border-[#dba94d] text-[#704718] hover:bg-[#f4e2b2] hover:text-[#7b5522]"
             }`}
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}

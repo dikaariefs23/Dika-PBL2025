@@ -30,33 +30,33 @@ const Hero = () => {
 
   return (
     <section
-      className={`hero-section relative h-[95vh] flex flex-col items-center justify-center overflow-hidden text-center transition-all duration-700 ease-in-out dark:text-[#f5f3ee] ${
+      className={`relative h-[95vh] flex flex-col items-center justify-center overflow-hidden text-center transition-all duration-700 ease-in-out ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-105"
       }`}
     >
-      {/* Background Image */}
+      {/* Background Image + gradasi putih */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg transition-all duration-700 ease-in-out"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
         style={{
-          backgroundImage: `url(${heroImg})`,
-          transform: `translateY(${offsetY * 0.2}px)`,
+          backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.85), rgba(255,255,255,0.7)), url(${heroImg})`,
           backgroundAttachment: isMobile ? "scroll" : "fixed",
+          transform: `translateY(${offsetY * 0.2}px)`,
         }}
       ></div>
 
-      {/* Overlay agar tulisan tetap terbaca */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-transparent dark:from-black/70 dark:via-black/50 dark:to-transparent transition-opacity duration-700 ease-in-out"></div>
+      {/* Overlay dark mode */}
+      <div className="absolute inset-0 dark:bg-gradient-to-b dark:from-black/60 dark:via-black/40 dark:to-transparent transition-opacity duration-700 ease-in-out"></div>
 
       {/* Konten utama */}
       <div
-        className={`relative z-10 px-6 text-white transition-all duration-1000 ${
+        className={`relative z-10 px-6 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#ffdc9a] hero-glow mb-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[#7c4a1a] dark:text-[#ffdc9a] mb-4 drop-shadow-sm">
           Schole Fitrah – Menumbuhkan Fitrah Anak & Keluarga
         </h1>
-        <p className="text-base md:text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
+        <p className="text-base md:text-lg text-[#4b3621] dark:text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
           Pendidikan holistik yang menumbuhkan fitrah jasmani, akal, ruhani, dan sosial;
           relevan bagi keluarga modern di era digital.
         </p>
@@ -69,13 +69,13 @@ const Hero = () => {
         >
           <button
             onClick={() => scrollToSection("programs")}
-            className="bg-[color:var(--sf-gold)] text-[color:var(--sf-dark)] font-semibold px-7 py-3 rounded-full hover:bg-[color:var(--sf-brown)] hover:text-white transition-all shadow-lg active:scale-95"
+            className="bg-[#b27b3d] text-white font-semibold px-7 py-3 rounded-full hover:bg-[#9c6d32] transition-all shadow-md active:scale-95"
           >
             Lihat Program
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className="border-2 border-[color:var(--sf-gold)] text-[color:var(--sf-gold)] font-semibold px-7 py-3 rounded-full hover:bg-[color:var(--sf-gold)] hover:text-white transition-all shadow-lg active:scale-95"
+            className="border-2 border-[#b27b3d] text-[#b27b3d] font-semibold px-7 py-3 rounded-full hover:bg-[#b27b3d] hover:text-white transition-all shadow-md active:scale-95"
           >
             Tentang Kami
           </button>
@@ -85,7 +85,7 @@ const Hero = () => {
       {/* Panah scroll */}
       <div
         onClick={() => scrollToSection("tujuan-utama")}
-        className={`absolute bottom-6 cursor-pointer animate-bounce text-[color:var(--sf-gold)] hover:text-white transition-all ${
+        className={`absolute bottom-6 cursor-pointer animate-bounce text-[#b27b3d] hover:text-[#7c4a1a] dark:text-[#ffdc9a] transition-all ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
