@@ -57,7 +57,7 @@ const Hero = () => {
           Schole Fitrah – Menumbuhkan Fitrah Anak & Keluarga
         </h1>
         <p className="text-base md:text-lg text-[#4b3621] dark:text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
-          Pendidikan holistik yang menumbuhkan fitrah jasmani, akal, ruhani, dan sosial;
+          Pendidikan holistik yang menumbuhkan fitrah jasmani, akal, rohani, dan sosial
           relevan bagi keluarga modern di era digital.
         </p>
 

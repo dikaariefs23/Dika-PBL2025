@@ -17,8 +17,13 @@ export default function Programs() {
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#fffaf5] via-[#fff4e6] to-[#f5e3c5] dark:from-[#1a1a1a] dark:via-[#151515] dark:to-[#0e0e0e] text-center fade-section overflow-hidden">
+    <section className="relative py-20 pb-36 text-center overflow-hidden 
+      bg-gradient-to-b from-[#fffaf5] via-[#fff4e6] to-[#f5e3c5]
+      dark:from-[#0b0b0b] dark:via-[#0b0b0b] dark:to-[#0b0b0b] 
+      transition-colors duration-700">
+      
       <div className="relative z-10">
+        {/* Judul */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#704718] dark:text-[#ffdc9a] mb-4">
           Program Schole Fitrah
         </h2>
@@ -32,7 +37,11 @@ export default function Programs() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group bg-white/90 dark:bg-[#181818]/90 backdrop-blur-md border border-[#e2d3b8] dark:border-[#2a2a2a] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_25px_rgba(107,67,28,0.25)] p-8 transition-all duration-500 hover:-translate-y-2"
+              className="group bg-[#ffffff]/90 dark:bg-[#111111]/90 
+              border border-[#e2d3b8] dark:border-[#1f1f1f] 
+              rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] 
+              hover:shadow-[0_8px_25px_rgba(255,220,154,0.15)] 
+              p-8 transition-all duration-500 hover:-translate-y-2"
             >
               <h3 className="text-xl font-semibold text-[#704718] dark:text-[#ffdc9a] mb-3">
                 {card.title}
@@ -46,8 +55,11 @@ export default function Programs() {
         </div>
       </div>
 
-      {/* Latar belakang lembut (hiasan gradasi bawah) */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#b27b3d]/10 to-transparent dark:from-[#2a2a2a]/40"></div>
+      {/* Efek gradasi bawah halus */}
+      <div className="absolute inset-x-0 bottom-0 h-32 
+        bg-gradient-to-t from-[#b27b3d]/10 to-transparent 
+        dark:from-[#0b0b0b] dark:to-transparent">
+      </div>
     </section>
   );
 }

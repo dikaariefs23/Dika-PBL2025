@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="bg-[#fffdfb] dark:bg-[#0b0b0b] text-[#5b4636] dark:text-[#f5f3ee] min-h-screen overflow-hidden transition-colors duration-500">
+    <section className="bg-[#fffdfb] dark:bg-[#0b0b0b] text-[#5b4636] dark:text-[#f5f3ee] min-h-screen overflow-hidden transition-colors duration-500 pb-32">
       {/* HERO */}
       <Hero />
 

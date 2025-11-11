@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // Komponen umum
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CursorEffect from "./CursorEffect"; // ✨ custom gold cursor
 
 // Halaman
 import Home from "./pages/Home";
@@ -39,19 +40,24 @@ export default function App() {
   useFadeUpOnScroll(); // ✅ aktifkan animasi scroll global
 
   return (
-    <div className="flex flex-col min-h-full bg-sfLight text-sfDark dark:bg-[#0b0b0b] dark:text-sfLight transition-colors duration-300">
-      <Navbar />
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/audience" element={<Audience />} />
-          <Route path="/talentmapping" element={<TalentMapping />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* ✨ Efek kursor emas aktif di semua halaman */}
+      <CursorEffect />
+
+      <div className="flex flex-col min-h-full bg-sfLight text-sfDark dark:bg-[#0b0b0b] dark:text-sfLight transition-colors duration-300">
+        <Navbar />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/audience" element={<Audience />} />
+            <Route path="/talentmapping" element={<TalentMapping />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
