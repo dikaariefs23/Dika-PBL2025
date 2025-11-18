@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Programs", path: "/programs" },
     { name: "Talent Mapping", path: "/talentmapping" },
-    { name: "Audience", path: "/audience" },
+    { name: "Gallery", path: "/audience" },  // <<< DIGANTI DI SINI
   ];
 
   return (

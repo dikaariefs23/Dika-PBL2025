@@ -1,10 +1,12 @@
+/* ======= GOOGLE FONT (HARUS PALING ATAS) ======= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ======= TAILWIND ======= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ======= FONT ======= */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+/* ======= GLOBAL BODY ======= */
 body {
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background-color: var(--sf-light);
@@ -42,12 +44,12 @@ body {
 
 .btn-outline {
   @apply border border-[color:var(--sf-brown)] text-[color:var(--sf-brown)]
-  hover:bg-[color:var(--sf-brown)] hover:text-white active:scale-95;
+    hover:bg-[color:var(--sf-brown)] hover:text-white active:scale-95;
 }
 
 .dark .btn-outline {
   @apply border-[#ffdc9a] text-[#ffdc9a]
-  hover:bg-[#ffdc9a] hover:text-black;
+    hover:bg-[#ffdc9a] hover:text-black;
 }
 
 /* ======= UTILITIES ======= */
@@ -208,7 +210,7 @@ section {
   box-shadow: 0 12px 28px rgba(197, 150, 108, 0.25);
 }
 
-/* ======= GLASS CARD EFFECT ======= */
+/* ======= GLASS CARD ======= */
 .glass {
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);

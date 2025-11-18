@@ -4,13 +4,12 @@ import { Routes, Route } from "react-router-dom";
 // Komponen umum
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import CursorEffect from "./CursorEffect"; // ✨ custom gold cursor
 
 // Halaman
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Programs from "./pages/Programs";
-import Audience from "./pages/Audience";
+import Audience from "./pages/Gallery";
 import TalentMapping from "./pages/TalentMapping";
 import NotFound from "./pages/NotFound";
 
@@ -41,9 +40,6 @@ export default function App() {
 
   return (
     <>
-      {/* ✨ Efek kursor emas aktif di semua halaman */}
-      <CursorEffect />
-
       <div className="flex flex-col min-h-full bg-sfLight text-sfDark dark:bg-[#0b0b0b] dark:text-sfLight transition-colors duration-300">
         <Navbar />
         <main className="flex-1">
