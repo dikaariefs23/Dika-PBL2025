@@ -6,12 +6,12 @@ export default function Pillars() {
     {
       icon: <Lightbulb size={36} className="text-brand-600 mb-4" />,
       title: 'Fitrah Diri',
-      desc: 'Menumbuhkan kesadaran diri, iman, adab, dan potensi unik anak sebagai khalifah di bumi.',
+      desc: 'Menumbuhkan kesadaran diri, iman, adab, dan potensi unik orangtua dan anak sebagai khalifah dan rahmat di bumi.',
     },
     {
       icon: <BookOpen size={36} className="text-brand-600 mb-4" />,
       title: 'Fitrah Belajar',
-      desc: 'Mendorong proses belajar alami sesuai minat dan tahap tumbuh anak, berbasis pengalaman nyata.',
+      desc: 'Mendorong proses belajar alami sesuai minat dan potensi anak, berbasis pengalaman nyata.',
     },
     {
       icon: <Users size={36} className="text-brand-600 mb-4" />,

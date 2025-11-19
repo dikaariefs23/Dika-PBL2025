@@ -94,17 +94,17 @@ const Home = () => {
             {
               icon: <Heart className="w-10 h-10 text-[#C59C6C] mb-3 mx-auto" />,
               title: "Kelas Orang Tua",
-              desc: "Pendampingan orang tua agar memahami fitrah anak dan mampu menjadi teladan dalam rumah tangga.",
+              desc: "Pendampingan ayah bunda agar memahami fitrah diri dan anak sehingga mampu menjadi pembimbing dan teladan dalam keluarga.",
             },
             {
               icon: <Sprout className="w-10 h-10 text-[#C59C6C] mb-3 mx-auto" />,
-              title: "Tarbiyatul Aulad",
-              desc: "Program inti pembinaan anak usia dini dan sekolah dasar berbasis fitrah dan karakter.",
+              title: "Pendidikan Anak",
+              desc: "Program pembinaan anak usia dini, usia dasar dan pemuda berbasis potensi dengan mengacu pada 7 pilar pendidikan.",
             },
             {
               icon: <Sparkles className="w-10 h-10 text-[#C59C6C] mb-3 mx-auto" />,
-              title: "Learning Festival",
-              desc: "Ajang kolaborasi komunitas belajar untuk menumbuhkan fitrah belajar anak dan keluarga.",
+              title: "Kolaborasi Pentahelix",
+              desc: "Ajang kolaborasi antara lima elemen; akademisi, dunia  industri, komunitas, pemerintah, dan media yang bertujuan untuk menciptakan ekosistem yang saling melengkapi guna mencapai tujuan berkelanjutan.",
             },
           ].map((program, i) => (
             <div
